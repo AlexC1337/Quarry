@@ -1,11 +1,15 @@
 os.loadAPI("utils.lua")
 
---slot 4 heeft water bucket nodig
+--zorg dat slot met water bucket geselect is
 function digChannel()
+	turtle.back()
+	turtle.digDown()
+	turtle.placeDown()
+	turtle.forward()
+	turtle.digDown()
 	for i = 1, 62 do
 		turtle.digDown()
 		if i % 2 == 1 then
-			turtle.select(4)
 			turtle.placeDown()
 			turtle.back()
 			turtle.placeDown()
@@ -15,6 +19,7 @@ function digChannel()
 	end
 end
 
+--zorg dat slot met water bucket geselect is
 function digChannels()
 	turtle.turnLeft()
 	utils.move(30)
