@@ -1,4 +1,4 @@
-os.loadAPI(utils.lua)
+os.loadAPI("utils.lua")
 
 function placeLandmarks()
 	
@@ -19,5 +19,5 @@ function placeLandmarks()
 	turtle.place()
 	utils.turn()
 	utils.move(31)
-	turtle.moveRight()
+	turtle.turnRight()
 end
